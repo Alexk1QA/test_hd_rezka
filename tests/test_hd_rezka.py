@@ -13,3 +13,13 @@ class TestAll:
             result.append(hd_rezka.get_element_text("xpath", locator))
 
         assert result == BaseLocator.ER_GROUPS_SELECTORS
+
+    def test_registration(self, get_temp_mail_io):
+
+        hd_rezka = RegistrationPage()
+        hd_rezka.registration(get_temp_mail_io)
+
+        assert hd_rezka.get_element_text("xpath", BaseLocator.AR_ACCEPT_REG) == BaseLocator.ER_ACCEPT_REG
+
+
+
