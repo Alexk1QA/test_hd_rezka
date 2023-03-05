@@ -8,6 +8,7 @@ from selenium import webdriver
 
 class Driver:
     def __init__(self):
+        # test
         self.service = Service(ChromeDriverManager().install())
 
         self.options = Options()
