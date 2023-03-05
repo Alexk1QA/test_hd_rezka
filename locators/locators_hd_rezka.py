@@ -25,3 +25,15 @@ class BaseLocator:
 
     AR_ACCEPT_REG = '//*[@id="top-head"]/div/div[2]/span'
     ER_ACCEPT_REG = "ПРОФИЛЬ"
+
+    #  --- --- --- --- --- --- --- --- --- Selectors for third TEST. Only XPATH --- --- --- --- --- --- --- --- ---
+
+    LOGIN_BUTTON_ON_MAIN_PAGE = '//*[@id="top-head"]/div/div[2]/a[1]'
+    POPUP_LOG_EMAIL = '//*[@id="login_name"]'
+    POPUP_LOG_PASS = '//*[@id="login_password"]'
+    POPUP_LOG_CONFIRM = '//*[@id="login-popup"]/div[2]/div/div[1]/form/div[3]/div/button'
+
+    LOGIN_AND_PASS = 'test_hd_rezka@gmail.com'
+
+    AR_ACCEPT_LOG = '//*[@id="top-head"]/div/div[2]/span'
+    ER_ACCEPT_LOG = "ПРОФИЛЬ"

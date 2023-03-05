@@ -30,3 +30,21 @@ class RegistrationPage(Driver):
         time.sleep(1)
         self.driver.find_element(Driver.get_driver_by("xpath"), BaseLocator.POPUP_REGISTRATION_CONFIRM).click()
         time.sleep(3)
+
+
+class LoginPage(Driver):
+    def login(self):
+        first_window = self.driver.window_handles[0]
+        self.driver.switch_to.window(first_window)
+        self.driver.get("https://rezka.ag/")
+
+        self.driver.find_element(Driver.get_driver_by("xpath"), BaseLocator.LOGIN_BUTTON_ON_MAIN_PAGE).click()
+        time.sleep(1)
+        self.driver.find_element(Driver.get_driver_by("xpath"), BaseLocator.POPUP_LOG_EMAIL) \
+            .send_keys(BaseLocator.LOGIN_AND_PASS)
+        time.sleep(1)
+        self.driver.find_element(Driver.get_driver_by("xpath"), BaseLocator.POPUP_LOG_PASS) \
+            .send_keys(BaseLocator.LOGIN_AND_PASS)
+        time.sleep(1)
+        self.driver.find_element(Driver.get_driver_by("xpath"), BaseLocator.POPUP_LOG_CONFIRM).click()
+        time.sleep(3)

@@ -21,5 +21,13 @@ class TestAll:
 
         assert hd_rezka.get_element_text("xpath", BaseLocator.AR_ACCEPT_REG) == BaseLocator.ER_ACCEPT_REG
 
+    def test_login(self):
+
+        hd_rezka = LoginPage()
+        hd_rezka.login()
+
+        assert hd_rezka.get_element_text("xpath", BaseLocator.AR_ACCEPT_LOG) == BaseLocator.ER_ACCEPT_LOG
+
+
 
 
