@@ -1,0 +1,1 @@
+from locators import locators_hd_rezka
